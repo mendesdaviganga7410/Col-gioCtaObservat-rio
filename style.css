@@ -1,0 +1,403 @@
+/* ==========================================================================
+   1. RESET E VARIÁVEIS DO SITE
+   ========================================================================== */
+:root {
+    --pu-site-link-hover-color: #00a3e3;
+    --pu-mobile-main-header-height: 85px;
+    --brand-blue: #00205b;
+    --bg-gray: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* ESTILO WINDOWS 10: TUDO QUADRADO */
+    border-radius: 0 !important;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--bg-gray);
+    font-family: 'Raleway', sans-serif;
+    padding-top: var(--pu-mobile-main-header-height);
+    color: #333;
+}
+
+/* ==========================================================================
+   2. HEADER PRINCIPAL (FIXO E PLANO)
+   ========================================================================== */
+#mobile-main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--pu-mobile-main-header-height);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 0 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.btn-menu-toggle {
+    position: absolute;
+    left: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.header-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-header-sigla-ou-logo {
+    border-inline-end: 1px solid #ccc;
+    color: var(--pu-site-link-hover-color);
+    font-weight: 900;
+    font-size: 26px;
+    padding-inline-end: 8px;
+    margin-inline-end: 8px;
+    line-height: 1.1;
+}
+
+#header-mobile-main-logo {
+    height: 30px;
+    object-fit: contain;
+    display: block;
+}
+
+#main-header-titulo {
+    font-size: 13px;
+    color: #666;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   3. BLOCOS ESTRUTURAIS (BANNER E CONTEÚDO)
+   ========================================================================== */
+
+.brand-strip {
+    background-color: var(--brand-blue);
+    color: white;
+    width: 95%;
+    max-width: 1300px;
+    padding: 60px 50px;
+    text-align: center;
+    margin: 30px auto 0;
+    border-left: 10px solid var(--pu-site-link-hover-color); /* Detalhe lateral Metro */
+}
+
+.brand-strip h1 {
+    font-weight: 800;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.content {
+    background: white;
+    width: 95%;
+    max-width: 1300px;
+    margin: 25px auto 50px;
+    padding: 70px 30px;
+    min-height: 600px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 25px;
+    text-align: justify;
+}
+
+/* ==========================================================================
+   4. MAIN MENU (APLICANDO O ESTILO DA NAVEGAÇÃO / WINDOWS 10)
+   ========================================================================== */
+/* ==========================================================================
+   NOVO MAIN MENU (CATEGORIAS) - EXECUÇÃO REFINADA
+   ========================================================================== */
+.main-menu {
+    background-color: #e6e6e6; /* Cinza base */
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc; /* Linha de base sólida */
+}
+
+.main-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 2px; /* Espaço 'flat' entre os botões */
+}
+
+.main-menu ul li {
+    flex: 1;
+    max-width: 280px;
+}
+
+.main-menu ul li a {
+    display: block;
+    padding: 22px 10px;
+    text-align: center;
+    color: #444;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: #dcdcdc; /* Bloco sólido */
+    border-bottom: 4px solid transparent; /* Reserva espaço para o destaque */
+    transition: none; 
+}
+
+/* O contraste: No hover/active, o bloco 'acende' como o pagination-nav */
+.main-menu ul li a:hover,
+.main-menu ul li.active a {
+    background-color: var(--brand-blue); /* Fundo forte */
+    color: #ffffff !important;
+    border-bottom: 4px solid var(--pu-site-link-hover-color); /* Linha de destaque Metro */
+}
+
+/* Ajuste Mobile para manter a ideia de blocos */
+@media (max-width: 768px) {
+    .main-menu ul {
+        flex-direction: column;
+        gap: 1px;
+    }
+    .main-menu ul li {
+        max-width: 100%;
+    }
+    .main-menu ul li a {
+        padding: 15px;
+        text-align: left;
+        padding-left: 25px;
+        border-bottom: none;
+        border-left: 5px solid transparent;
+    }
+    .main-menu ul li.active a {
+        border-left: 5px solid var(--pu-site-link-hover-color);
+    }
+}
+
+/* ==========================================================================
+   5. NAVEGAÇÃO ENTRE ABAS (PAGINATION)
+   ========================================================================== */
+.pagination-nav {
+    width: 95%;
+    max-width: 1300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination-nav ul li a {
+    padding: 15px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    color: #ffffff !important;
+}
+
+.btn-prev { background-color: #888888; }
+.btn-prev:hover { background-color: #666666; }
+
+.btn-next { background-color: var(--brand-blue); }
+.btn-next:hover { background-color: var(--pu-site-link-hover-color); }
+
+/* ==========================================================================
+   6. MENU LATERAL (OFF-CANVAS)
+   ========================================================================== */
+.modal-container {
+    border: none;
+    width: 450px;
+    max-width: 85vw;
+    height: 100%;
+    background: #1a1a1a;
+    outline: none;
+}
+
+.modal-header {
+    background-color: #111111;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.off-canvas-label {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#pu-main-menu-off-canvas {
+    padding: 20px 0;
+}
+
+#pu-main-menu-off-canvas>li>a,
+.main-link {
+    color: var(--pu-site-link-hover-color) !important;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 40px 10px 50px;
+    display: block;
+}
+
+.pu-menu .pu-menu li a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 40px 12px 75px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+
+.pu-menu .pu-menu li a::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: rotate(45deg);
+    margin-right: 12px;
+}
+
+/* ==========================================================================
+   7. RODAPÉ
+   ========================================================================== */
+.site-footer {
+    background-color: #e6e6e6;
+    padding: 60px 20px 30px;
+    border-top: 5px solid #ccc;
+    margin-top: 50px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    flex-wrap: wrap;
+}
+
+.footer-col h3 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #444;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-col ul li { margin-bottom: 10px; }
+
+.footer-col ul li a {
+    color: #555;
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    color: var(--pu-site-link-hover-color);
+}
+
+.footer-brand {
+    text-align: center;
+    border-top: 1px solid #dcdcdc;
+    padding-top: 30px;
+    color: #333;
+}
+
+.footer-brand img { height: 45px; margin-bottom: 20px; }
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    background: var(--brand-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   8. RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .brand-strip, .main-menu, .content {
+        width: 100%;
+        padding: 30px 15px;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .main-menu ul li {
+        max-width: 100%;
+    }
+
+    .pagination-nav ul {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .pagination-nav ul li a {
+        padding: 12px 5px;
+        font-size: 12px;
+    }
+}

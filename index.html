@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatório CTA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="top-bar" id="mobile-main-header">
+        <button id="mainNavTrigger" class="btn-menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                    d="M18 7H6m12 10H6m12-5H6" />
+            </svg>
+        </button>
+
+        <div class="header-content-wrapper">
+            <div class="header-brand-row">
+                <a id="main-header-sigla-ou-logo" href="https://www.fcav.unesp.br/#!/cta">CTA</a>
+                <a href="https://www.fcav.unesp.br/#!/">
+                    <img src="https://www.fcav.unesp.br/images/unesp.svg" id="header-mobile-main-logo" alt="Logo Unesp">
+                </a>
+            </div>
+            <div id="main-header-titulo">Colégio Técnico Agrícola "José Bonifácio"</div>
+        </div>
+        <dialog id="navigationModal" class="modal-container">
+            <div class="wrapper-off-canvas">
+                <div class="modal-header">
+                    <div class="off-canvas-label">Navegação</div>
+                    <button id="closeNavModal" class="modal-close-btn">&times;</button>
+                </div>
+                <div class="modal-content">
+                    <ul class="pu-menu flex-column" id="pu-main-menu-off-canvas">
+                        <li class="has-submenu">
+                            <a href="https://www.fcav.unesp.br/#!/colegio-agricola/administracao/"
+                                target="_parent"><span>Instituição</span></a>
+                            <ul class="pu-menu">
+                                <li class="active"><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/administracao/sobre-o-cta/"><span>Sobre
+                                            o C.T.A.</span></a></li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/administracao/localizacao/"><span>Localização</span></a>
+                                </li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/administracao/direcao/"><span>Direção</span></a>
+                                </li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/administracao/coordenadores/"><span>Coordenadores</span></a>
+                                </li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/administracao/corpo-docente/"><span>Corpo
+                                            Docente</span></a></li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/administracao/secretaria/"><span>Secretaria</span></a>
+                                </li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/administracao/associacao-de-pais-e-mestres---apm/"><span>Associação
+                                            de Pais e Mestres</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="https://www.fcav.unesp.br/#!/colegio-agricola/secretaria/"
+                                target="_parent"><span>Cursos</span></a>
+                            <ul class="pu-menu">
+                                <li><a href="https://www.fcav.unesp.br/#!/colegio-agricola/secretaria/ensino-medio/"><span>Ensino
+                                            Médio</span></a></li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/secretaria/agropecuaria/"><span>Agropecuária</span></a>
+                                </li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/secretaria/informatica/"><span>Informática</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="https://www.fcav.unesp.br/#!/colegio-agricola/estagios/"
+                                target="_parent"><span>Vida Acadêmica</span></a>
+                            <ul class="pu-menu">
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/estagios/mural/"><span>Mural</span></a>
+                                </li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/estagios/estagios/"><span>Estágios</span></a>
+                                </li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/estagios/boletim/"><span>Boletim</span></a>
+                                </li>
+                                <li><a
+                                        href="https://www.fcav.unesp.br/#!/colegio-agricola/estagios/permanencia-estudantil/"><span>Permanência
+                                            Estudantil</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.fcav.unesp.br/#!/colegio-agricola/vestibulinho/"
+                                class="main-link"><span>Vestibulinho</span></a></li>
+                        <li><a href="https://www.fcav.unesp.br/#!/colegio-agricola/regimento/"
+                                class="main-link"><span>Regimento Escolar</span></a></li>
+                        <li><a href="https://www.fcav.unesp.br/#!/colegio-agricola/projetos-pedagogicos/"
+                                class="main-link"><span>Projetos Pedagógicos</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </dialog>
+    </header>
+    <section class="brand-strip">
+        <h1>OBSERVATÓRIO COLÉGIO TÉCNICO AGRÍCOLA</h1><br>
+        <h2>"José Bonifácio"</h2>
+    </section>
+
+    <nav class="main-menu">
+        <ul>
+            <li><a href="Páginas/Aba1.html">Categoria1</a></li>
+            <li><a href="Páginas/Aba2.html">Categoria2</a></li>
+            <li><a href="Páginas/Aba3.html">Categoria3</a></li>
+            <li><a href="Páginas/Aba4.html">Categoria4</a></li>
+            <li><a href="Páginas/Aba5.html">Categoria5</a></li>
+            <li><a href="Páginas/Aba6.html">Categoria6</a></li>
+            <li><a href="Páginas/Aba7.html">Categoria7</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h2>Bem-vindo ao Observatório</h2>
+        <p>O Colégio Técnico Agrícola "José Bonifácio" da UNESP - Campus de Jaboticabal é um dos pioneiros em todo o país na área da Educação Agropecuária e já formou mais de 5.800 técnicos aptos para várias atividades agropecuárias em seus 103 anos, prestando uma valiosa contribuição à educação e à economia do país.
+
+Além de tradicional, o Colégio Técnico Agrícola "José Bonifácio" está alinhado ao nosso tempo e, por isso, tem formado técnicos em informática desde 2009, e já ofertou cerca de 230 profissionais de excelência para o mercado de trabalho.
+
+A Escola possui atualmente 270 alunos, sendo 165 no Curso Técnico em Agropecuária Integrado ao Ensino Médio, 75 no curso Técnico em Informática Integrado ao Ensino Médio, ambos em período diurno; e 30 alunos no Curso Técnico em Agropecuária EaD, para alunos que já finalizaram o Ensino Médio.
+
+Sendo a melhor escola pública da cidade de Jaboticabal, segundo o Ideb 2023, o Colégio Técnico Agrícola "José Bonifácio" também tem permitido que grande parte dos seus alunos ingressem na universidade. Assim, reafirmamos em todos os aspectos o nosso compromisso com a educação pública de qualidade. </p>
+    </main>
+
+    <script>
+        const navigationModal = document.getElementById('navigationModal');
+        const openModalBtn = document.getElementById('mainNavTrigger');
+        const closeModalBtn = document.getElementById('closeNavModal');
+
+        openModalBtn.addEventListener('click', () => { navigationModal.showModal(); });
+        closeModalBtn.addEventListener('click', () => { navigationModal.close(); });
+        navigationModal.addEventListener('click', (e) => { if (e.target === navigationModal) navigationModal.close(); });
+    </script>
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h3>FUNDAÇÕES</h3>
+                <ul>
+                    <li><a href="https://editoraunesp.com.br/" target="_blank" rel="noopener noreferrer">Editora Unesp</a></li>
+                    <li><a href="https://www.fundunesp.org.br/" target="_blank" rel="noopener noreferrer">Fundunesp</a></li>
+                    <li><a href="https://www.vunesp.com.br/" target="_blank" rel="noopener noreferrer">Fundação Vunesp</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>GOVERNO</h3>
+                <ul>
+                    <li><a href="https://www.saopaulo.sp.gov.br/" target="_blank" rel="noopener noreferrer">Governo de São Paulo</a></li>
+                    <li><a href="https://www.cruesp.sp.gov.br/" target="_blank" rel="noopener noreferrer">Conselho de Reitores</a></li>
+                    <li><a href="https://unesp.br/transparencia/" target="_blank" rel="noopener noreferrer">Transparência Unesp</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>SISTEMAS</h3>
+                <ul>
+                    <li><a href="https://sistemas.unesp.br/" target="_blank" rel="noopener noreferrer">Sistemas Online</a></li>
+                    <li><a href="https://www2.unesp.br/eduroam" target="_blank" rel="noopener noreferrer">EDUROAM</a></li>
+                    <li><a href="https://www2.unesp.br/vpn" target="_blank" rel="noopener noreferrer">VPN</a></li>
+                    <li><a href="https://email.unesp.br/" target="_blank" rel="noopener noreferrer">Webmail</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>SAÚDE</h3>
+                <ul>
+                    <li><a href="https://www.unesp.br/unespsaude/" target="_blank" rel="noopener noreferrer">Unesp Saúde</a></li>
+                    <li><a href="https://www.ecaresentinela.com.br/" target="_blank" rel="noopener noreferrer">e-Care Sentinela</a></li>
+                    <li><a href="https://www.unesp.br/numis" target="_blank" rel="noopener noreferrer">NUMIS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>INFORMAÇÕES</h3>
+                <ul>
+                    <li><a href="https://www2.unesp.br/secgeral/manuais/legislacao-unesp/" target="_blank" rel="noopener noreferrer">Legislação Unesp</a></li>
+                    <li><a href="https://www.unesp.br/ai/documentos/lgpd/legislacao/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a></li>
+                    <li><a href="https://www.fcav.unesp.br/lib/modals/modal-preferencias-privacidade.php" target="_blank" rel="noopener noreferrer">Preferências de Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-brand">
+            <img src="https://www.fcav.unesp.br/images/unesp.svg" alt="Logo Unesp Rodapé">
+            <p><strong>FCAV - Faculdade de Ciências Agrárias e Veterinárias - Câmpus de Jaboticabal</strong></p>
+            <p>Via de Acesso Prof. Paulo Donato Castellane s/n</p>
+            <p>Jaboticabal/SP - CEP 14884-900</p>
+        </div>
+        
+    </footer>
+</body>
+
+</html>
