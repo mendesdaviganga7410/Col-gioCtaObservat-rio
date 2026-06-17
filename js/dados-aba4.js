@@ -1,0 +1,41 @@
+/**
+ * dados-aba4.js — Banco de postagens da Categoria 4
+ *
+ * ================================================================
+ *  BANCO DE POSTAGENS  ✏️  EDITE APENAS ESTE BLOCO
+ *  Campos: id, titulo, categoria, data, thumbnail, link, resumo
+ *  Deixe thumbnail="" para ícone de interrogação.
+ *  Deixe link="#" para botão "Em breve".
+ * ================================================================
+ */
+const POSTS = [
+
+    {
+        id: "post-011",
+        titulo: "Mapeamento Térmico de Aviários de Corte",
+        categoria: "Pesquisa",
+        data: "2026-03-28",
+        thumbnail: "",
+        link: "estudos/conforto-termico.html",
+        resumo: "Sensores infravermelhos identificam pontos críticos de calor que afetam a conversão alimentar de frangos durante o verão intenso."
+    },
+    {
+        id: "post-012",
+        titulo: "Lançamento de Cultivar de Milho Super Doce",
+        categoria: "Notícia",
+        data: "2026-04-02",
+        thumbnail: "",
+        link: "produtos/milho-sd2026.html",
+        resumo: "Nova variedade desenvolvida regionalmente apresenta maior teor de brix e resistência superior à lagarta-do-cartucho."
+    },
+    {
+        id: "post-013",
+        titulo: "Reciclagem de Efluentes em Usinas de Biodiesel",
+        categoria: "Pesquisa",
+        data: "2026-04-05",
+        thumbnail: "",
+        link: "sustentabilidade/efluentes.html",
+        resumo: "Processo de filtragem por membranas permite o reuso de 90% da água utilizada na lavagem do biocombustível para irrigação controlada."
+    },
+
+];

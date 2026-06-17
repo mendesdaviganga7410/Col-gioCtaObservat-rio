@@ -1,0 +1,675 @@
+/* ==========================================================================
+   1. RESET E VARIÁVEIS DO SITE
+   ========================================================================== */
+:root {
+    --pu-site-link-hover-color: #00a3e3;
+    --pu-mobile-main-header-height: 85px;
+    --brand-blue: #00205b;
+    --bg-gray: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* ESTILO WINDOWS 10: TUDO QUADRADO */
+    border-radius: 0 !important;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--bg-gray);
+    font-family: 'Montserrat', sans-serif;
+    padding-top: var(--pu-mobile-main-header-height);
+    color: #333;
+}
+
+/* ==========================================================================
+   2. HEADER PRINCIPAL (FIXO E PLANO)
+   ========================================================================== */
+#mobile-main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--pu-mobile-main-header-height);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 0 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.btn-menu-toggle {
+    position: absolute;
+    left: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.header-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-header-sigla-ou-logo {
+    border-inline-end: 1px solid #ccc;
+    color: #004c73;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 27px;
+    padding-inline-end: 12px;
+    margin-inline-end: 12px;
+    line-height: 1;
+}
+
+#header-mobile-main-logo {
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
+#main-header-titulo {
+    font-size: 11px;
+    color: #555;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   3. BLOCOS ESTRUTURAIS (BANNER E CONTEÚDO)
+   ========================================================================== */
+
+.brand-strip {
+    background-color: var(--brand-blue);
+    color: white;
+    width: 95%;
+    max-width: 1300px;
+    padding: 60px 50px;
+    text-align: center;
+    margin: 30px auto 0;
+    /* BARRA AZUL LATERAL REMOVIDA */
+}
+
+.brand-strip h1 {
+    font-weight: 800;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.content {
+    background: white;
+    width: 95%;
+    max-width: 1300px;
+    margin: 25px auto 50px;
+    padding: 70px 30px;
+    min-height: 600px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 25px;
+    text-align: justify;
+}
+
+/* ==========================================================================
+   4. MAIN MENU (ESTILO ABAS WINDOWS 10)
+   ========================================================================== */
+.main-menu {
+    background-color: #ffffff;
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+    border-bottom: 2px solid #e1e1e1;
+}
+
+.main-menu ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.main-menu ul li {
+    flex: 1;
+    max-width: 250px;
+}
+
+.main-menu ul li a {
+    display: block;
+    padding: 20px 10px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    background-color: transparent;
+    border-bottom: 4px solid transparent;
+    transition: all 0.1s;
+    /* ANIMAÇÃO CURTA */
+}
+
+.main-menu ul li a:hover {
+    background-color: #f5f5f5;
+    color: var(--brand-blue);
+    border-bottom: 4px solid #ddd;
+}
+
+.main-menu ul li.active a {
+    background-color: #ffffff;
+    color: var(--pu-site-link-hover-color);
+    border-bottom: 4px solid var(--pu-site-link-hover-color);
+    font-weight: 800;
+}
+
+/* ==========================================================================
+   5. NAVEGAÇÃO ENTRE ABAS (PAGINATION)
+   ========================================================================== */
+.pagination-nav {
+    width: 95%;
+    max-width: 1300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination-nav ul li a {
+    padding: 15px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    color: #ffffff !important;
+    transition: background 0.1s;
+    text-decoration: none;
+}
+
+.btn-prev {
+    background-color: #888888;
+}
+
+.btn-prev:hover {
+    background-color: #666666;
+}
+
+.btn-next {
+    background-color: var(--brand-blue);
+}
+
+.btn-next:hover {
+    background-color: var(--pu-site-link-hover-color);
+}
+
+/* ==========================================================================
+   6. MENU LATERAL (OFF-CANVAS)
+   ========================================================================== */
+.modal-container {
+    border: none;
+    width: 450px;
+    max-width: 85vw;
+    height: 100%;
+    background: #1a1a1a;
+    outline: none;
+}
+
+.modal-header {
+    background-color: #111111;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.off-canvas-label {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#pu-main-menu-off-canvas {
+    padding: 20px 0;
+}
+
+#pu-main-menu-off-canvas>li>a,
+.main-link {
+    color: var(--pu-site-link-hover-color) !important;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 40px 10px 50px;
+    display: block;
+}
+
+.pu-menu .pu-menu li a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 40px 12px 75px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+
+.pu-menu .pu-menu li a::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: rotate(45deg);
+    margin-right: 12px;
+}
+
+/* ==========================================================================
+   7. RODAPÉ (RESTAURADO E COMPLETO)
+   ========================================================================== */
+.site-footer {
+    background-color: #e6e6e6;
+    padding: 60px 20px 30px;
+    border-top: 5px solid #ccc;
+    margin-top: 50px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h3 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #444;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #555;
+    font-size: 14px;
+    transition: color 0.1s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--pu-site-link-hover-color);
+}
+
+.footer-brand {
+    text-align: center;
+    border-top: 1px solid #dcdcdc;
+    padding-top: 30px;
+    color: #333;
+}
+
+.footer-brand img {
+    height: 45px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    background: var(--brand-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background 0.1s;
+}
+
+.social-icon:hover {
+    background: var(--pu-site-link-hover-color);
+}
+
+/* ==========================================================================
+   8. RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    .brand-strip,
+    .main-menu,
+    .content {
+        width: 100%;
+        padding: 30px 15px;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .main-menu ul li {
+        max-width: 100%;
+    }
+
+    .main-menu ul li a {
+        text-align: left;
+        padding: 15px 25px;
+        border-bottom: none;
+        border-left: 4px solid transparent;
+    }
+
+    .main-menu ul li.active a {
+        border-left: 4px solid var(--pu-site-link-hover-color);
+    }
+
+    .pagination-nav ul {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .pagination-nav ul li a {
+        padding: 12px 5px;
+        font-size: 12px;
+    }
+
+    .footer-columns {
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 10px 0 30px;
+    text-align: left;
+}
+
+.news-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.15s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    box-shadow: 0 6px 24px rgba(0, 32, 91, 0.13);
+    transform: translateY(-3px);
+}
+
+.card-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #e8edf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-thumb img.thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.thumb-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #a0aec0;
+}
+
+.thumb-placeholder span {
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-categoria {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--brand-blue);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 3px 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-body {
+    padding: 14px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-data {
+    font-size: 11px;
+    color: #999;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-titulo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+    flex: 1;
+}
+
+.card-resumo {
+    font-size: 12.5px;
+    color: #777;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-link-btn {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 7px 16px;
+    background: var(--brand-blue);
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-family: 'Montserrat', sans-serif;
+    align-self: flex-start;
+    transition: background 0.1s;
+}
+
+.card-link-btn:hover {
+    background: var(--pu-site-link-hover-color);
+}
+
+.grid-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #aaa;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    border-bottom: 3px solid var(--brand-blue);
+    padding-bottom: 14px;
+}
+
+.section-header h2 {
+    font-size: 22px !important;
+    margin-bottom: 0 !important;
+    color: var(--brand-blue) !important;
+    text-align: left !important;
+}
+
+.section-header .total-posts {
+    font-size: 13px;
+    color: #999;
+    font-weight: 600;
+}
+
+.content {
+    text-align: left !important;
+}
+
+@media (max-width: 600px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   9. ENCAPSULAMENTO DE CONTEÚDO DINÂMICO (DADOS ABAS)
+   ========================================================================== */
+.conteudo-dinamico-aba {
+    width: 100%;
+    text-align: left;
+    color: #444;
+}
+.conteudo-dinamico-aba h3, 
+.conteudo-dinamico-aba h4 {
+    color: var(--brand-blue);
+    margin: 25px 0 15px;
+    font-weight: 700;
+}
+.conteudo-dinamico-aba p,
+.conteudo-dinamico-aba span {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+}
+.conteudo-dinamico-aba a {
+    color: var(--brand-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease;
+}
+.conteudo-dinamico-aba a:hover {
+    color: var(--pu-site-link-hover-color);
+    text-decoration: underline;
+}
+.conteudo-dinamico-aba table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.conteudo-dinamico-aba th, 
+.conteudo-dinamico-aba td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #e1e4e8;
+}
+.conteudo-dinamico-aba th {
+    background-color: var(--brand-blue);
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.conteudo-dinamico-aba tr:hover td {
+    background-color: #f8f9fa;
+}
+.conteudo-dinamico-aba ul, 
+.conteudo-dinamico-aba ol {
+    margin: 0 0 20px 20px;
+    padding-left: 20px;
+}
+.conteudo-dinamico-aba li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #555;
+}
