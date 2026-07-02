@@ -1,14 +1,6 @@
-/**
- * dados-aba2.js — Banco de postagens da Categoria 2
- *
- * ================================================================
- *  BANCO DE POSTAGENS  ✏️  EDITE APENAS ESTE BLOCO
- *  Campos: id, titulo, categoria, data, thumbnail, link, resumo
- *  Deixe thumbnail="" para ícone de interrogação.
- *  Deixe link="#" para botão "Em breve".
- * ================================================================
- */
-const POSTS = [
+import { Post } from '../types/post';
+
+export const POSTS: Post[] = [
 
     {
         id: "post-005",

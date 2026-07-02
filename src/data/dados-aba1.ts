@@ -1,21 +1,6 @@
-/**
- * dados-aba1.js — Banco de postagens da Categoria 1
- *
- * ================================================================
- *  BANCO DE POSTAGENS  ✏️  EDITE APENAS ESTE BLOCO
- *  Campos:
- *    id        → identificador único (não repita)
- *    titulo    → título que aparece no card
- *    categoria → Pesquisa | Notícia | Evento | Destaque
- *    data      → formato AAAA-MM-DD  (ex: "2025-08-20")
- *    thumbnail → caminho da imagem   (ex: "imagens/foto.jpg")
- *                deixe ""  para exibir o ícone de interrogação
- *    link      → página da postagem  (ex: "postagens/post.html")
- *                deixe "#" para o botão aparecer como "Em breve"
- *    resumo    → texto curto exibido no card (opcional)
- * ================================================================
- */
-const POSTS = [
+import { Post } from '../types/post';
+
+export const POSTS: Post[] = [
 
     {
         id: "post-001",
