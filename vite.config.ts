@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { defineConfig } from 'vitest/config';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -11,17 +11,30 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        aba1: resolve(__dirname, 'pages/aba1.html'),
-        aba2: resolve(__dirname, 'pages/aba2.html'),
-        aba3: resolve(__dirname, 'pages/aba3.html'),
-        aba4: resolve(__dirname, 'pages/aba4.html'),
-        aba5: resolve(__dirname, 'pages/aba5.html'),
-        aba6: resolve(__dirname, 'pages/aba6.html'),
-        aba7: resolve(__dirname, 'pages/aba7.html'),
+        // Eixos (Telas de Seleção)
+        eixo1: resolve(__dirname, 'pages/eixo1.html'),
+        eixo2: resolve(__dirname, 'pages/eixo2.html'),
+        eixo3: resolve(__dirname, 'pages/eixo3.html'),
+        eixo4: resolve(__dirname, 'pages/eixo4.html'),
+        eixo5: resolve(__dirname, 'pages/eixo5.html'),
+        // Tópicos (Grids de Conteúdo)
+        eixo1_topico1: resolve(__dirname, 'pages/eixo1-mapeamento-agroindustrial.html'),
+        eixo1_topico2: resolve(__dirname, 'pages/eixo1-profissoes-em-alta.html'),
+        eixo2_topico1: resolve(__dirname, 'pages/eixo2-cesta-basica.html'),
+        eixo2_topico2: resolve(__dirname, 'pages/eixo2-poder-de-compra.html'),
+        eixo3_topico1: resolve(__dirname, 'pages/eixo3-primeiro-emprego.html'),
+        eixo3_topico2: resolve(__dirname, 'pages/eixo3-mulheres-agro-ti.html'),
+        eixo4_topico1: resolve(__dirname, 'pages/eixo4-agro-40-profissional-hibrido.html'),
+        eixo4_topico2: resolve(__dirname, 'pages/eixo4-matematica-aplicada.html'),
+        eixo5_topico1: resolve(__dirname, 'pages/eixo5-guia-campus-ingressos.html'),
+        eixo5_topico2: resolve(__dirname, 'pages/eixo5-trajetoria-egressos.html'),
       }
     }
   },
   test: {
     environment: 'jsdom',
+    typecheck: {
+      tsconfig: './tsconfig.test.json',
+    },
   }
 });
