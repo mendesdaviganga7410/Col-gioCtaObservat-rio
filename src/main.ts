@@ -3,21 +3,47 @@ import { initNavigationMenu } from './menu';
 /**
  * Calcula o prefixo de caminho relativo para os assets/partials
  * baseado na profundidade da página atual na árvore de URLs.
- *
- * - index.html (raiz) → "assets/partials/"
- * - pages/aba*.html  → "../assets/partials/"
  */
 function resolverBasePath(): string {
-    const depth = window.location.pathname.split('/').filter(Boolean).length;
-    // Em dev (Vite) paths como /pages/aba1.html têm depth=2; raiz tem depth=0 ou 1
-    // Usamos a presença do segmento "pages" como sinal mais robusto
     const emSubpasta = window.location.pathname.includes('/pages/');
     return emSubpasta ? '../assets/partials/' : 'assets/partials/';
 }
 
 /**
- * Carrega e injeta os partials de header e footer, depois inicializa o menu.
- * Não precisa mais de parâmetros externos — resolve o caminho automaticamente.
+ * Ajusta os links da barra horizontal nav.main-menu e destaca a aba ativa.
+ */
+function configureMainMenu(): void {
+    const emSubpasta = window.location.pathname.includes('/pages/');
+    const pagePrefix = emSubpasta ? '' : 'pages/';
+    const homePrefix = emSubpasta ? '../index.html' : 'index.html';
+
+    const homeLink = document.getElementById('nav-link-home') as HTMLAnchorElement | null;
+    if (homeLink) homeLink.href = homePrefix;
+
+    for (let i = 1; i <= 5; i++) {
+        const link = document.getElementById(`nav-link-eixo${i}`) as HTMLAnchorElement | null;
+        if (link) {
+            link.href = `${pagePrefix}eixo${i}.html`;
+        }
+    }
+
+    const activeEixo = document.body.dataset['eixo'];
+    const activePage = document.body.dataset['page'];
+
+    const items = document.querySelectorAll('#main-eixos-menu ul li');
+    items.forEach(item => {
+        item.classList.remove('active');
+        const eixo = item.getAttribute('data-eixo');
+        if (activeEixo && eixo === activeEixo) {
+            item.classList.add('active');
+        } else if (activePage === 'home' && eixo === 'home') {
+            item.classList.add('active');
+        }
+    });
+}
+
+/**
+ * Carrega e injeta os partials de header e footer, depois inicializa os menus.
  */
 export async function setupPage(): Promise<void> {
     const basePath = resolverBasePath();
@@ -33,7 +59,7 @@ export async function setupPage(): Promise<void> {
             const headerPlaceholder = document.getElementById('header-placeholder');
             if (headerPlaceholder) {
                 headerPlaceholder.outerHTML = html;
-                // initNavigationMenu é chamado após o HTML do header estar no DOM
+                configureMainMenu();
                 initNavigationMenu();
             }
         } else {
