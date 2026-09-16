@@ -594,13 +594,13 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: var(--color-primary);
-    color: var(--color-surface);
-    font-size: 10px;
-    font-weight: 700;
+    background: #00205b;
+    color: #ffffff !important;
+    font-size: 11px;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: 0;
 }
 
@@ -612,9 +612,11 @@ body {
 }
 
 .card-data {
-    font-size: var(--font-xs);
-    color: var(--gray-600);
-    font-weight: 600;
+    font-size: 11px;
+    color: #00205b;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: 6px;
 }
 
@@ -641,10 +643,10 @@ body {
     display: inline-block;
     margin-top: auto;
     padding: 8px 16px;
-    background: var(--color-primary);
-    color: var(--color-surface);
+    background: #00205b;
+    color: #ffffff !important;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.6px;
     align-self: flex-start;
@@ -654,6 +656,13 @@ body {
 
 .card-link-btn:hover {
     background: #001438;
+    color: #ffffff !important;
+}
+
+.card-link-btn--disabled {
+    background: var(--gray-300) !important;
+    color: var(--gray-800) !important;
+    cursor: not-allowed;
 }
 
 .grid-empty {
