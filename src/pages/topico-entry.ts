@@ -37,13 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const topicoDescricao = document.getElementById('topico-descricao');
     if (topicoDescricao) topicoDescricao.textContent = topico.descricao;
 
-    const topicoIcone = document.getElementById('topico-icone');
-    if (topicoIcone) topicoIcone.textContent = topico.icone;
-
     const eixoLink = document.getElementById('breadcrumb-eixo-link') as HTMLAnchorElement | null;
     if (eixoLink) {
         eixoLink.href = `${eixo.id}.html`;
-        eixoLink.textContent = `Eixo ${eixo.numero} — ${eixo.titulo}`;
+        eixoLink.textContent = eixo.titulo;
     }
 
     const topicoBreadcrumb = document.getElementById('breadcrumb-topico');
